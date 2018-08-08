@@ -31,15 +31,25 @@ Make directory with URL and hash URL with C.
 > int mkdir(const char* 경로이름, 모드)
 #### 모드
 >  S_IRUSR : user-read
+
 >S_IWUSR : user-write
+
 >S_IXUSR : user-execute
+
 >S_IRGRP : group-read
+
 >S_IWGR : group-write
+
 >S_IXGRP : group-execute
+
 >S_IROTH : other-read
+
 >S_IWOTH : other-write
+
 >S_IXOTH : other-execute
+
 > 심화 : IRWXU는 S_IRUSR | S_IWUSR | S_IXUSR와 같다.
+
 > 예시 : mkdir("C:\Users\GrapCandy", S_IRWXU | S_IRWXG | S_IRWXO)
 
 
