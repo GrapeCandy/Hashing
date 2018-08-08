@@ -57,23 +57,38 @@ Make directory with URL and hash URL with C.
 ## Reading a Directory
 ### DIR 구조체
 > 디렉토리 스트림(DIR *)
+
 > 접근 가능한 디렉토리에 접근할 때 필요한 구조체
+
 > FILE 구조체와 비슷한 역할을 한다.
+
 > #include <dirent.h>를 이용하여 사용가능하다.
+
 ### opendir()
 > 경로 이름에 상응하는 디렉토리 스트림을 열고 해당 스트림에 대한 pointer를 반환한다.
+
 > pointer는 디렉토리의 첫번째 entry를 가리킨다.
+
 **사용법**
+
 > #include <sys/types.h>
+
 > #nclude <dirent.h>
+
 > DIR* opendir(경로이름)
+
 ### readdir()
 **사용법**
+
 >#include <sys/types.h>
+
 >#include <dirent.h>
+
 >struct dirent* readdir(DIR* dp)
+
 #### DIR* dp
 > dp가 가리키고 있는 디렉토리 entry에서 다음 디렉토리 entry에 대한 pointer를 반환한다.
+
 > 마지막 entry라면 null을 반환한다.
 ### closedir()
 > 해당 디렉토리 스트림을 닫는다.
